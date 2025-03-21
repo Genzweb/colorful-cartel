@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, GitHub, Mail, Phone } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Github, Mail, Phone } from 'lucide-react';
 import Logo from '../ui/Logo';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
@@ -31,7 +30,7 @@ const Footer: React.FC = () => {
     { icon: <Facebook size={18} />, path: 'https://facebook.com' },
     { icon: <Twitter size={18} />, path: 'https://twitter.com' },
     { icon: <Instagram size={18} />, path: 'https://instagram.com' },
-    { icon: <GitHub size={18} />, path: 'https://github.com' },
+    { icon: <Github size={18} />, path: 'https://github.com' },
   ];
   
   return (
