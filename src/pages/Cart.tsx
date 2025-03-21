@@ -10,7 +10,7 @@ const Cart: React.FC = () => {
       <Navbar />
       
       <main className="flex-1 pt-32 pb-16">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <ShoppingCart />
         </div>
       </main>
