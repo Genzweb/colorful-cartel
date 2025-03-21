@@ -18,40 +18,40 @@ const Index: React.FC = () => {
     {
       icon: <Clock className="h-8 w-8" />,
       title: 'Instant Delivery',
-      description: 'Receive your digital products instantly after purchase via email.',
+      description: 'Receive your digital account details instantly after purchase via email.',
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: 'High-Quality Products',
-      description: 'Curated selection of premium digital products from top creators.',
+      title: 'High-Quality Accounts',
+      description: 'Curated selection of premium digital accounts from top platforms.',
     },
     {
       icon: <Award className="h-8 w-8" />,
       title: 'Satisfaction Guarantee',
-      description: 'Not satisfied? We offer a 30-day money-back guarantee on all purchases.',
+      description: 'Not satisfied? We offer a 30-day warranty on all account purchases.',
     },
   ];
 
   const categories = [
     {
-      name: 'UI Templates',
-      count: 128,
-      image: 'https://images.unsplash.com/photo-1601158935942-52255782d322?q=80&w=1936&auto=format&fit=crop',
+      name: 'Streaming',
+      count: 28,
+      image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1940&auto=format&fit=crop',
     },
     {
-      name: 'Stock Photos',
-      count: 256,
-      image: 'https://images.unsplash.com/photo-1595859703065-2259982784bb?q=80&w=1974&auto=format&fit=crop',
+      name: 'Music',
+      count: 35,
+      image: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=1974&auto=format&fit=crop',
     },
     {
-      name: 'Icons & Graphics',
-      count: 512,
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop',
+      name: 'Adult',
+      count: 42,
+      image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop',
     },
     {
-      name: 'Fonts',
-      count: 64,
-      image: 'https://images.unsplash.com/photo-1609921141835-710b7fa6e438?q=80&w=2070&auto=format&fit=crop',
+      name: 'Gaming',
+      count: 54,
+      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop',
     },
   ];
 
@@ -68,10 +68,10 @@ const Index: React.FC = () => {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <Badge className="mb-4">Why Choose Us</Badge>
               <h2 className="text-3xl font-bold tracking-tight mb-4">
-                The Best Digital Marketplace
+                Premium Accounts Marketplace
               </h2>
               <p className="text-muted-foreground">
-                We offer high-quality digital products, secure transactions, and excellent customer support.
+                We offer high-quality premium accounts, secure transactions, and excellent customer support.
               </p>
             </div>
             
@@ -102,7 +102,7 @@ const Index: React.FC = () => {
                 Browse By Category
               </h2>
               <p className="text-muted-foreground">
-                Explore our wide range of digital products categorized for easy discovery.
+                Explore our wide range of premium accounts categorized for easy discovery.
               </p>
             </div>
             
@@ -110,7 +110,7 @@ const Index: React.FC = () => {
               {categories.map((category, index) => (
                 <a 
                   key={index} 
-                  href={`/categories/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/products?category=${category.name.toLowerCase()}`}
                   className="group relative rounded-xl overflow-hidden aspect-square hover-scale"
                 >
                   <img 
@@ -158,16 +158,16 @@ const Index: React.FC = () => {
                           {index === 0 ? 'Sarah Johnson' : index === 1 ? 'Michael Chen' : 'Emma Wilson'}
                         </h3>
                         <p className="text-sm text-muted-foreground">
-                          {index === 0 ? 'Designer' : index === 1 ? 'Developer' : 'Marketer'}
+                          {index === 0 ? 'Netflix User' : index === 1 ? 'Spotify User' : 'VPN User'}
                         </p>
                       </div>
                     </div>
                     <p className="italic text-muted-foreground">
                       {index === 0 
-                        ? "The quality of digital products I've purchased here is outstanding. Saved me hours of work!" 
+                        ? "The Netflix account I bought works perfectly! Instant delivery and great price." 
                         : index === 1 
-                          ? "Great platform with excellent customer service. The checkout process was seamless."
-                          : "I've been using templates from this site for my business. Highly recommend!"
+                          ? "Been using my Spotify Premium account for 3 months now with no issues. Great service!"
+                          : "The NordVPN account works on all my devices. Excellent value for money."
                       }
                     </p>
                   </CardContent>

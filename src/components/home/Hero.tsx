@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Package } from 'lucide-react';
+import { ArrowRight, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero: React.FC = () => {
@@ -18,27 +18,27 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center space-y-10">
           <div className="space-y-6 max-w-3xl">
             <div className="inline-block rounded-full bg-muted px-3 py-1 text-sm mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <span className="text-primary font-medium">Premium Digital Products</span>
+              <span className="text-primary font-medium">Premium Accounts Marketplace</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              Elevate Your Digital Experience
+              Premium Accounts at Affordable Prices
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              Discover high-quality digital products created by world-class creators. Templates, tools, and resources to boost your workflow.
+              Get instant access to premium streaming, music, adult content, gaming, VPN, and antivirus accounts at unbeatable prices.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Link to="/products">
                 <Button size="lg" className="w-full sm:w-auto gap-2 group">
-                  Explore Products
+                  Browse Accounts
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
               <Link to="/categories">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  Browse Categories
+                  View Categories
                 </Button>
               </Link>
             </div>
@@ -48,8 +48,8 @@ const Hero: React.FC = () => {
             <div className="aspect-[16/9] rounded-xl overflow-hidden shadow-2xl ring-1 ring-gray-900/10 transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-1">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80 opacity-0 hover:opacity-10 transition-opacity z-10" />
               <img 
-                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop"
-                alt="Digital marketplace products showcase" 
+                src="https://images.unsplash.com/photo-1603383928972-2116518cd3f3?q=80&w=2000&auto=format&fit=crop"
+                alt="Premium accounts showcase" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
             <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 glass-card px-8 py-4 rounded-xl flex gap-10 shadow-lg">
               <div className="text-center">
                 <p className="text-2xl font-bold">10k+</p>
-                <p className="text-sm text-muted-foreground">Products</p>
+                <p className="text-sm text-muted-foreground">Accounts</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold">8k+</p>
@@ -68,18 +68,6 @@ const Hero: React.FC = () => {
                 <p className="text-2xl font-bold">99%</p>
                 <p className="text-sm text-muted-foreground">Satisfaction</p>
               </div>
-            </div>
-          </div>
-          
-          {/* Trusted by section */}
-          <div className="mt-24 w-full max-w-4xl animate-fade-in" style={{ animationDelay: '1.2s' }}>
-            <p className="text-sm text-muted-foreground mb-6">TRUSTED BY INDUSTRY LEADERS</p>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-              {['Google', 'Microsoft', 'Shopify', 'Spotify', 'Airbnb'].map((company) => (
-                <div key={company} className="text-lg font-medium text-muted-foreground/70 hover:text-foreground transition-colors">
-                  {company}
-                </div>
-              ))}
             </div>
           </div>
         </div>
