@@ -58,6 +58,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       // In a real app, this would be an API call to your auth service
       // For demo purposes, we'll use a simple check
       if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+        console.log("Admin login successful");
         const adminUser: User = {
           id: 'admin-1',
           name: 'Admin User',
