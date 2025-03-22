@@ -24,9 +24,9 @@ const AdminOrders: React.FC = () => {
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
       case 'completed': return 'success';
-      case 'processing': return 'warning';
+      case 'processing': return 'default';
       case 'shipped': return 'secondary';
-      case 'pending': return 'default';
+      case 'pending': return 'outline';
       default: return 'outline';
     }
   };
