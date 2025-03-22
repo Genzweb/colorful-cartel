@@ -11,6 +11,7 @@ import {
   Settings, 
   LogOut,
   ChevronRight,
+  FolderOpen,
 } from 'lucide-react';
 import { useAuthContext } from '@/context/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -72,6 +73,18 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
           >
             <Package className="mr-3 h-5 w-5" />
             Products
+          </Link>
+          
+          <Link 
+            to="/admin/categories" 
+            className={`flex items-center px-4 py-3 text-sm font-medium rounded-md ${
+              isActive('/admin/categories') 
+                ? 'bg-primary text-primary-foreground' 
+                : 'text-foreground hover:bg-muted'
+            }`}
+          >
+            <FolderOpen className="mr-3 h-5 w-5" />
+            Categories
           </Link>
           
           <Link 

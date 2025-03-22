@@ -28,6 +28,7 @@ import AdminCustomers from "./pages/admin/Customers";
 import AdminPayments from "./pages/admin/Payments";
 import AdminCoupons from "./pages/admin/Coupons";
 import AdminSettings from "./pages/admin/Settings";
+import AdminCategories from "./pages/admin/Categories";
 
 const queryClient = new QueryClient();
 
@@ -82,6 +83,11 @@ const AppRoutes = () => {
       <Route path="/admin/products" element={
         <AdminRoute>
           <AdminProducts />
+        </AdminRoute>
+      } />
+      <Route path="/admin/categories" element={
+        <AdminRoute>
+          <AdminCategories />
         </AdminRoute>
       } />
       <Route path="/admin/orders" element={
