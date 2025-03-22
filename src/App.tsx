@@ -25,7 +25,7 @@ import Dashboard from "./pages/admin/Dashboard";
 
 const queryClient = new QueryClient();
 
-// Protected route component
+// Protected route component for admin access
 const AdminRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, user } = useAuthContext();
   
@@ -67,7 +67,7 @@ const AppRoutes = () => {
         </ProtectedRoute>
       } />
       
-      {/* Admin Routes */}
+      {/* Admin Routes - Make sure admin users can access dashboard */}
       <Route path="/admin" element={
         <AdminRoute>
           <Dashboard />

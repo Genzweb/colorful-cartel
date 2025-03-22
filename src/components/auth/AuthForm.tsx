@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -42,7 +41,7 @@ type AuthFormProps = {
 };
 
 const AuthForm: React.FC<AuthFormProps> = ({ type, redirectPath = '/' }) => {
-  const { login, register, error, clearError } = useAuthContext();
+  const { login, register, error, clearError, user } = useAuthContext();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -71,7 +70,13 @@ const AuthForm: React.FC<AuthFormProps> = ({ type, redirectPath = '/' }) => {
     try {
       await login(data.email, data.password);
       toast.success('Login successful');
-      navigate(redirectPath);
+      
+      // Check if the user is admin and redirect to admin dashboard
+      if (data.email === 'admin@example.com') {
+        navigate('/admin');
+      } else {
+        navigate(redirectPath);
+      }
     } catch (error) {
       // Error is handled by the AuthContext
     } finally {

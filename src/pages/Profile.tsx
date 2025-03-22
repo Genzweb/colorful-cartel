@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { useAuthContext } from '@/context/AuthContext';
@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
+import { Settings, LogOut } from 'lucide-react';
 
 const Profile: React.FC = () => {
   const { isAuthenticated, user, logout } = useAuthContext();
@@ -71,11 +72,27 @@ const Profile: React.FC = () => {
                     {user?.role === 'admin' && (
                       <Badge className="mb-4">Admin</Badge>
                     )}
+                    
+                    {/* Admin Dashboard Link */}
+                    {user?.role === 'admin' && (
+                      <Button 
+                        variant="default" 
+                        className="w-full mb-2"
+                        asChild
+                      >
+                        <Link to="/admin">
+                          <Settings className="mr-2 h-4 w-4" />
+                          Admin Dashboard
+                        </Link>
+                      </Button>
+                    )}
+                    
                     <Button 
                       variant="outline" 
-                      className="w-full mt-4"
+                      className="w-full mt-2"
                       onClick={logout}
                     >
+                      <LogOut className="mr-2 h-4 w-4" />
                       Sign Out
                     </Button>
                   </div>
